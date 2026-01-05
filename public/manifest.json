@@ -1,0 +1,55 @@
+{
+  "name": "HabitFlow - Daily Tracker",
+  "short_name": "HabitFlow",
+  "description": "Build better habits with offline tracking and seamless sync.",
+  "start_url": "/",
+  "display": "standalone",
+  "display_override": [
+    "window-controls-overlay"
+  ],
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icons/apple-icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon1.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Check Today",
+      "short_name": "Check",
+      "description": "Mark your daily habit as done",
+      "url": "/",
+      "icons": [
+        {
+          "src": "/icons/icon1.png",
+          "sizes": "512x512"
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/icons/icon1.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Desktop Dashboard"
+    },
+    {
+      "src": "/icons/icon1.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Mobile View"
+    }
+  ]
+}
