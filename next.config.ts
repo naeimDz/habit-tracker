@@ -15,12 +15,17 @@ const withPWA = require('next-pwa')({
   runtimeCaching: [
     {
       urlPattern: '/',
-      handler: 'StaleWhileRevalidate',
+      handler: 'CacheFirst',
       options: {
         cacheName: 'start-url',
         expiration: {
           maxEntries: 4,
           maxAgeSeconds: 30 * 24 * 60 * 60 // 30 days
+        },
+        // This ensures that the response is at least available for offline use
+        // and doesn't fall back to the offline page immediately.
+        cacheableResponse: {
+          statuses: [0, 200]
         }
       }
     },
