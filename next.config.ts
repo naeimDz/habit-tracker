@@ -1,3 +1,5 @@
+const defaultRuntimeCaching = require('next-pwa/cache');
+
 const withPWA = require('next-pwa')({
   dest: 'public',
   register: false,
@@ -8,9 +10,22 @@ const withPWA = require('next-pwa')({
   cacheOnFrontEndNav: true,     // Cache pages as user navigates
   reloadOnOnline: false,        // Don't auto-reload when back online (let sync handle it)
   fallbacks: {
-    // If the user is offline and the page isn't cached, what shows?
     document: '/offline',
   },
+  runtimeCaching: [
+    {
+      urlPattern: '/',
+      handler: 'StaleWhileRevalidate',
+      options: {
+        cacheName: 'start-url',
+        expiration: {
+          maxEntries: 4,
+          maxAgeSeconds: 30 * 24 * 60 * 60 // 30 days
+        }
+      }
+    },
+    ...defaultRuntimeCaching
+  ]
 })
 
 module.exports = withPWA({

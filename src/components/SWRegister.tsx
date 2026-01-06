@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 
 export default function SWRegister() {
     useEffect(() => {
-        if ('serviceWorker' in navigator && window.location.hostname !== 'localhost') {
+        if ('serviceWorker' in navigator) {
             navigator.serviceWorker
                 .register('/sw.js')
                 .then((registration) => {
