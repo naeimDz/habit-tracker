@@ -19,7 +19,7 @@ export default function OfflinePage() {
                     <h1 className="text-2xl font-bold mb-2">You are Offline</h1>
                     <p className="text-gray-400">
                         It seems you lost your internet connection.
-                        Don't worry, HabitFlow still works offline!
+                        Don&apos;t worry, HabitFlow still works offline!
                     </p>
                 </div>
 
