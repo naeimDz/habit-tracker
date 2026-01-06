@@ -9,7 +9,7 @@ const withPWA = require('next-pwa')({
   reloadOnOnline: false,        // Don't auto-reload when back online (let sync handle it)
   fallbacks: {
     // If the user is offline and the page isn't cached, what shows?
-    // document: '/_offline',  // (Optional: We would need to create an _offline page)
+    document: '/offline',
   },
 })
 
