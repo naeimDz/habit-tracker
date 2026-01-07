@@ -14,13 +14,15 @@
   "icons": [
     {
       "src": "/icons/apple-icon.png",
-      "sizes": "192x192",
-      "type": "image/png"
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
       "src": "/icons/icon1.png",
-      "sizes": "512x512",
-      "type": "image/png"
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ],
   "shortcuts": [
@@ -32,7 +34,7 @@
       "icons": [
         {
           "src": "/icons/icon1.png",
-          "sizes": "512x512"
+          "sizes": "any"
         }
       ]
     }
@@ -40,14 +42,14 @@
   "screenshots": [
     {
       "src": "/icons/icon1.png",
-      "sizes": "512x512",
+      "sizes": "any",
       "type": "image/png",
       "form_factor": "wide",
       "label": "Desktop Dashboard"
     },
     {
       "src": "/icons/icon1.png",
-      "sizes": "512x512",
+      "sizes": "any",
       "type": "image/png",
       "form_factor": "narrow",
       "label": "Mobile View"
